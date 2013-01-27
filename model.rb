@@ -5,20 +5,18 @@ module T
 
     key :test
     key :test2
-
   end
 end
 
 
 t = T::Test.new
 
-t.test = 'hello_world'
-t.test2 = 'xxxxxxx'
+# t.test = 'hello_world'
+# t.test2 = 'x123xxxxxx'
+# t.id = 31133
 # t.save
 
-m = T::Test.find_by_test2('hello_world')
-#
-# p m.test2
+values = T::Test.find_by_test('hello_world')
 
-
+p values.map(&:attributes)
 
